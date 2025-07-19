@@ -5,7 +5,6 @@ import { redirect } from "next/navigation"
 import dbConnect from "@/lib/mongodb"
 import { User, Message, Chat } from "@/models/index" // Modellar index.ts dan import qilindi
 import GlobalChatClient from "@/components/global-chat-client"
-import SignOutButton from "@/components/sign-out-button"
 import Link from "next/link"
 import type { ClientUser, ClientMessage } from "@/types/app-types" // Yangi turlar import qilindi
 
@@ -95,12 +94,7 @@ export default async function GlobalChatPage() {
             Sozlamalar
           </Link>
         </nav>
-        <div className="mt-auto">
-          <SignOutButton />
-        </div>
       </aside>
-
-      {/* Main Chat Area - Client Componentga o'tkazamiz */}
       <GlobalChatClient
         initialMessages={serializedMessages}
         initialUsers={serializedUsers}

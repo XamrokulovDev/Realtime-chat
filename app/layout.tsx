@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Global Chat",
-  description: "Real-time, minimalistic chat platform",
+  description: "Real-time chat website",
     generator: 'v0.dev'
 }
 

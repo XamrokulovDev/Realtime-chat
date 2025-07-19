@@ -5,7 +5,6 @@ import dbConnect from "@/lib/mongodb"
 import { User } from "@/models/index" // Modellar index.ts dan import qilindi
 import Link from "next/link"
 import ContactsClient from "@/components/contacts-client"
-import SignOutButton from "@/components/sign-out-button"
 import type { ClientUser } from "@/types/app-types" // Yangi tur import qilindi
 
 export default async function ContactsPage() {
@@ -64,11 +63,7 @@ export default async function ContactsPage() {
             Sozlamalar
           </Link>
         </nav>
-        <div className="mt-auto">
-          <SignOutButton />
-        </div>
       </aside>
-
       {/* Main Content - Client Componentga o'tkazamiz */}
       <ContactsClient
         initialContacts={serializedContacts}

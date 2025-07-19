@@ -8,7 +8,6 @@ import { redirect } from "next/navigation"
 import dbConnect from "@/lib/mongodb"
 import { Chat, Message } from "@/models/index" // Modellar index.ts dan import qilindi
 import ChatClient from "@/components/chat-client"
-import SignOutButton from "@/components/sign-out-button"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import type { ClientChat, ClientMessage, ClientUser } from "@/types/app-types" // Yangi turlar import qilindi
@@ -135,11 +134,7 @@ export default async function ChatPage({ params }: ChatPageProps) {
             Sozlamalar
           </Link>
         </nav>
-        <div className="mt-auto">
-          <SignOutButton />
-        </div>
       </aside>
-
       {/* Main Chat Area - Client Componentga o'tkazamiz */}
       <ChatClient chat={serializedChat} initialMessages={serializedMessages} currentUserId={session.user.id} />
     </div>
