@@ -10,7 +10,6 @@ import { useToast } from "@/hooks/use-toast"
 import type { IMessage } from "@/models/Message"
 import type { IUser } from "@/models/User"
 import type { IChat } from "@/models/Chat"
-// Link importi olib tashlandi
 
 interface ChatClientProps {
   chat: IChat & { participants: IUser[] }
